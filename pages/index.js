@@ -1,5 +1,13 @@
+import Link from 'next/link'
+
 const Index = () => (
-  <div>Hello World!!</div>
+  <div>
+    <h1>Home</h1>
+    <Link href="/about">
+      <a>Go to About</a>
+    </Link>
+    <p>Welcome to the home page.</p>
+  </div>
 )
 
 export default Index
