@@ -1,9 +1,9 @@
 import Layout from '../components/Layout'
 
-export default (props) => (
+export default ({ statusCode }) => (
   <Layout title="Error!">
-  {props.statusCode
-    ? `Could not load user data: Status Code ${props.statusCode}`
+  {statusCode
+    ? `Could not load user data: Status Code ${statusCode}`
     : `Coudn't get that page, sorry!`}
   </Layout>
 )

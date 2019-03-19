@@ -1,8 +1,8 @@
-import Layout from '../../components/Layout'
 import { Component } from 'react'
 import fetch from 'isomorphic-unfetch'
 
 import Error from '../_error'
+import Layout from '../../components/Layout'
 
 class About extends Component {
   static async getInitialProps() {
@@ -16,7 +16,9 @@ class About extends Component {
     const { user, statusCode } = this.props
 
     if (statusCode) {
-      return <Error statusCode={statusCode} />
+      return (
+        <Error statusCode={statusCode} />
+      )
     }
 
     return (
