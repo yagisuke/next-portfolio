@@ -7,17 +7,19 @@ import Layout from '../../components/Layout'
 class About extends Component {
   static async getInitialProps() {
     const res = await fetch('https://api.github.com/users/yagisuke')
-    const statusCode = res.status > 200 ? res.status : false
     const data = await res.json()
-    return { user: data, statusCode }
+    return {
+      user: data,
+      status: res.status
+    }
   }
 
   render() {
-    const { user, statusCode } = this.props
+    const { user, status } = this.props
 
-    if (statusCode) {
+    if (status > 200) {
       return (
-        <Error statusCode={statusCode} />
+        <Error statusCode={status} />
       )
     }
 
