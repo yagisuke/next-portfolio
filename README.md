@@ -12,4 +12,6 @@ $ npm i -g now // https://zeit.co/onboarding
 $ now
 ```
 
+![next-portfolio](next-portfolio.gif)
+
 https://www.udemy.com/universal-react-with-nextjs-the-ultimate-guide
